@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "eslint src --fix && yarn format",
-    "lint:strict": "eslint --max-warnings=0 src",
+    "lint:strict": "eslint --max-warnings=5 src",
     "typecheck": "tsc --noEmit --incremental false",
     "test:watch": "jest --watch",
     "test": "jest",
@@ -19,6 +19,8 @@
   },
   "dependencies": {
     "clsx": "^1.2.1",
+    "moment": "^2.29.4",
+    "momentjs": "^2.0.0",
     "next": "^13.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -54,7 +56,7 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
-      "eslint --max-warnings=0",
+      "eslint --max-warnings=5",
       "prettier -w"
     ],
     "**/*.{json,css,scss,md,webmanifest}": [
