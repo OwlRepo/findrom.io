@@ -7,6 +7,7 @@ import Layout from '@/components/layout/Layout';
 import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import Seo from '@/components/Seo';
+import ArrowLink from '@/components/links/ArrowLink';
 
 /**
  * SVGR Support
@@ -83,21 +84,21 @@ export default function HomePage() {
       <Seo />
 
       <main>
-        {/*CTA */}
-        <section className='my-20 '>
-          <div className='layout flex flex-col items-stretch justify-start'>
-            <div className='flex flex-1  flex-col items-center justify-center'>
+        {/*HERO */}
+        <section className='bg-gradient-to-br from-primary-500 to-primary-300'>
+          <div className='layout flex min-h-screen flex-col items-stretch justify-center'>
+            <div className='flex flex-1  flex-col items-center justify-center text-white'>
               <h1 className='mt-4'>FINDROM.IO</h1>
-              <div className='mt-20 flex min-w-max flex-row items-center justify-center'>
+              <div className='mt-20 flex min-w-max flex-row items-center justify-center text-white'>
                 <h1>Hi! I Am</h1>
-                <h3 className='mx-4 rounded-full bg-primary-500 py-2 px-6 text-white shadow-lg shadow-primary-200'>
+                <h3 className='mx-4 rounded-full bg-primary-800 py-2 px-6 text-white shadow-lg shadow-primary-500'>
                   Front End Engineer
                 </h3>
               </div>
               <h1>Romeo Angeles</h1>
-              <p className='mt-2 mt-7 text-center text-sm text-gray-800'>
+              <p className='mt-2 mt-7 text-center text-sm text-white'>
                 Developing web and mobile applications for over{' '}
-                <b className='text-primary-500'>
+                <b className='text-white'>
                   {moment()
                     .diff(moment([2020, 3]), 'years')
                     .toString()}{' '}
@@ -115,54 +116,124 @@ export default function HomePage() {
                 >
                   Hire Me
                 </ButtonLink>
-                <Button
-                  className='mx-3 rounded-lg'
-                  variant='outline'
-                  onClick={() => {
-                    document!
-                      .querySelector('#notable_projects')!
-                      .scrollIntoView({
-                        behavior: 'smooth',
-                      });
-                  }}
-                >
-                  Projects
-                </Button>
               </div>
             </div>
           </div>
         </section>
-        {/*TECH STACK */}
+        {/*Multi-platform */}
         <section className='my-32 bg-white'>
-          <div className='layout flex flex-row flex-wrap items-stretch justify-around'>
-            {techStack.imageLinks.map((link) => (
-              <Image
-                key={link}
-                className='m-5 object-contain'
-                alt='nextjs-logo'
-                src={link}
-                height={150}
-                width={150}
-              />
-            ))}
+          <div className='layout grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2'>
+            <div className='flex flex-col flex-wrap items-start justify-start text-primary-500'>
+              <h4>Multi-Platform</h4>
+              <h1 className='text-[3.5rem] leading-none text-dark'>
+                Reaching users on any screen
+              </h1>
+              <p className='mt-5 text-justify leading-relaxed text-gray-500'>
+                For over{' '}
+                <b className='font-bold text-gray-500'>
+                  {moment()
+                    .diff(moment([2020, 3]), 'years')
+                    .toString()}{' '}
+                  years
+                </b>{' '}
+                I have developed applications that's able to reach users from
+                Mobile and all the way up to Television Screens by using modern
+                frameworks to not only boost the speed of the development but
+                also deliver great user experience.
+              </p>
+              <ArrowLink href='/' className='mt-5 text-dark'>
+                View Projects
+              </ArrowLink>
+            </div>
+            <div className='flex flex-row flex-wrap items-stretch justify-around'>
+              {techStack.imageLinks.map((link) => (
+                <Image
+                  key={link}
+                  className='m-5 object-contain'
+                  alt='nextjs-logo'
+                  src={link}
+                  height={150}
+                  width={150}
+                />
+              ))}
+            </div>
           </div>
         </section>
-        {/*NOTABLE PROJECTS */}
-        <section
-          id='notable_projects'
-          className='mt-20 bg-gradient-to-t from-primary-500 to-white pb-10'
-        >
-          <div className='layout flex flex-row flex-wrap items-stretch justify-around '>
-            <div className='flex flex-1 flex-col items-stretch justify-start p-5 text-primary-100'>
-              <h1 className='mt-4 bg-gradient-to-br from-primary-500 to-primary-900 bg-clip-text text-center text-transparent '>
-                NOTABLE PROJECTS
+        {/*Proactive */}
+        <section className='my-32 bg-white'>
+          <div className='layout grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2'>
+            <div className='flex flex-row flex-wrap items-stretch justify-around'>
+              {techStack.imageLinks.map((link) => (
+                <Image
+                  key={link}
+                  className='m-5 object-contain'
+                  alt='nextjs-logo'
+                  src={link}
+                  height={150}
+                  width={150}
+                />
+              ))}
+            </div>
+            <div className='flex flex-col flex-wrap items-start justify-start text-primary-500'>
+              <h4>Proactive</h4>
+              <h1 className='text-[3.5rem] leading-none text-dark'>
+                Taking action by causing change
               </h1>
-              <div className='mt-5 max-w-max self-center rounded-full bg-gradient-to-r from-primary-500 to-primary-300 p-1 px-16' />
-              <div className='mt-16 grid grid-cols-1 gap-6 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3'>
-                {techStack.imageLinks.map((link) => (
-                  <ProjectCard key={link} imgLink={link} />
-                ))}
-              </div>
+              <p className='mt-5 text-justify leading-relaxed text-gray-500'>
+                For over{' '}
+                <b className='font-bold text-gray-500'>
+                  {moment()
+                    .diff(moment([2020, 3]), 'years')
+                    .toString()}{' '}
+                  years
+                </b>{' '}
+                I have found out that I am not the type of engineer that you
+                might say an <b>optimistic</b> one because I tend to think more
+                of the worst case scenario and plan a fix for it ahead of time
+                and be prepared to accept and adopt to changes that might
+                happen.
+              </p>
+              <ArrowLink href='/' className='mt-5 text-dark'>
+                Read Blog
+              </ArrowLink>
+            </div>
+          </div>
+        </section>
+
+        {/*Leader */}
+        <section className='my-32 bg-white'>
+          <div className='layout grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2'>
+            <div className='flex flex-col flex-wrap items-start justify-start text-primary-500'>
+              <h4>Leader</h4>
+              <h1 className='text-[3.5rem] leading-none text-dark'>
+                Inspires passion and motivation
+              </h1>
+              <p className='mt-5 text-justify leading-relaxed text-gray-500'>
+                For over{' '}
+                <b className='font-bold text-gray-500'>
+                  {moment()
+                    .diff(moment([2020, 3]), 'years')
+                    .toString()}{' '}
+                  years
+                </b>{' '}
+                I had opportunities to lead Front End Development teams either
+                in web or mobile
+              </p>
+              <ArrowLink href='/' className='mt-5 text-dark'>
+                View Projects
+              </ArrowLink>
+            </div>
+            <div className='flex flex-row flex-wrap items-stretch justify-around'>
+              {techStack.imageLinks.map((link) => (
+                <Image
+                  key={link}
+                  className='m-5 object-contain'
+                  alt='nextjs-logo'
+                  src={link}
+                  height={150}
+                  width={150}
+                />
+              ))}
             </div>
           </div>
         </section>
