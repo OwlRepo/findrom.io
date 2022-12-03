@@ -141,6 +141,7 @@ export default function HomePage() {
                 className='m-5 object-contain'
                 alt='nextjs-logo'
                 src={link}
+                height={150}
                 width={150}
               />
             ))}
