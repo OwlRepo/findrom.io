@@ -41,7 +41,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = (props) => {
   return (
-    <div className='flex flex-col items-stretch overflow-clip rounded-xl bg-white shadow-xl'>
+    <div className='flex cursor-pointer flex-col items-stretch overflow-clip rounded-xl bg-white shadow-md transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow hover:shadow-lg'>
       <div
         className='aspect-square h-40 bg-cover bg-center bg-no-repeat object-cover'
         style={{
@@ -84,7 +84,7 @@ const NotableProjectsTabs = () => {
   });
 
   return (
-    <div className='flex flex-col items-center justify-center overflow-scroll'>
+    <div className='flex flex-col items-center justify-center overflow-scroll '>
       <div className=' mb-5 flex flex-row overflow-clip rounded-full bg-gray-100'>
         {tabs.list.map((data, index) => (
           <Button
