@@ -77,40 +77,6 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
   );
 };
 
-const NotableProjectsTabs = () => {
-  const [tabs, setTabs] = React.useState({
-    activeIndex: 0,
-    list: ['LATEST', 'WEB 2.0', 'WEB 3.0', 'MOBILE'],
-  });
-
-  return (
-    <div className='flex flex-col items-center justify-center overflow-scroll '>
-      <div className=' mb-5 flex flex-row overflow-clip rounded-full bg-gray-100'>
-        {tabs.list.map((data, index) => (
-          <Button
-            key={data + index}
-            variant={tabs.activeIndex === index ? 'primary' : 'outline'}
-            onClick={() =>
-              setTabs({
-                activeIndex: index,
-                list: ['LATEST', 'WEB 2.0', 'WEB 3.0', 'MOBILE'],
-              })
-            }
-            className='rounded-none border-none'
-          >
-            {data}
-          </Button>
-        ))}
-      </div>
-      <div className='grid grid-cols-1 gap-10 p-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
-        {techStack.imageLinks.map((link, index) => {
-          return <ProjectCard key={index} imgLink={link} />;
-        })}
-      </div>
-    </div>
-  );
-};
-
 export default function HomePage() {
   return (
     <Layout>
@@ -152,19 +118,6 @@ export default function HomePage() {
                 </ButtonLink>
               </div>
             </div>
-          </div>
-        </section>
-        {/*Multi-platform */}
-        <section className='my-32 bg-white'>
-          <div className='layout flex flex-col items-stretch'>
-            <h1 className='mb-5 text-center text-[3.5rem] leading-none text-dark'>
-              Notable Projects
-            </h1>
-            <p className='mb-5 text-center'>
-              A Front End Engineer who aspires to create beautiful and
-              multi-platform applications using modern solutions
-            </p>
-            <NotableProjectsTabs />
           </div>
         </section>
 
