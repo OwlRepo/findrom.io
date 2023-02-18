@@ -19,6 +19,7 @@ const nextConfig = {
       'logos-download.com',
       'seeklogo.com',
       'assets.stickpng.com',
+      'firebasestorage.googleapis.com',
     ],
   },
 

@@ -2,12 +2,11 @@ import moment from 'moment';
 import Image from 'next/image';
 import * as React from 'react';
 
-import Button from '@/components/buttons/Button';
 import Layout from '@/components/layout/Layout';
+import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
 import UnderlineLink from '@/components/links/UnderlineLink';
 import Seo from '@/components/Seo';
-import ArrowLink from '@/components/links/ArrowLink';
 
 /**
  * SVGR Support
@@ -21,62 +20,6 @@ import ArrowLink from '@/components/links/ArrowLink';
 // Before you begin editing, follow all comments with `STARTERCONF`,
 // to customize the default configuration.
 
-const techStack = {
-  imageLinks: [
-    'https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/800px-Nextjs-logo.svg.png',
-    'https://logos-download.com/wp-content/uploads/2016/09/React_logo_wordmark.png',
-    'https://raw.githubusercontent.com/chakra-ui/chakra-ui/main/media/logo-colored@2x.png?raw=true',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Tailwind_CSS_logo.svg/2560px-Tailwind_CSS_logo.svg.png',
-    'https://seeklogo.com/images/B/bootstrap-logo-69A1CCC10B-seeklogo.com.png',
-    'https://download.logo.wine/logo/Dart_(programming_language)/Dart_(programming_language)-Logo.wine.png',
-    'https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png',
-    'https://assets.stickpng.com/images/62c6bc0beee9410fe137d91e.png',
-  ],
-};
-
-interface ProjectCardProps {
-  imgLink: string;
-}
-
-const ProjectCard: React.FC<ProjectCardProps> = (props) => {
-  return (
-    <div className='flex cursor-pointer flex-col items-stretch overflow-clip rounded-xl bg-white shadow-md transition duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:shadow hover:shadow-lg'>
-      <div
-        className='aspect-square h-40 bg-cover bg-center bg-no-repeat object-cover'
-        style={{
-          backgroundImage: `url(${props.imgLink})`,
-        }}
-      />
-      <div className='flex flex-col bg-white p-3 text-dark'>
-        <strong>Project Title</strong>
-        <small className='mt-5 text-justify'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis eius
-          modi labore maiores asperiores
-        </small>
-        <small className='mt-5 font-bold'>Tags: </small>
-        <div className='w-100 max-w-50 mt-3 flex flex-row flex-wrap'>
-          <p className='mr-2 mb-2 max-w-max rounded-full bg-gray-600 py-1 px-3 text-xs font-bold text-white'>
-            Web 3
-          </p>
-          <p className='mr-2 mb-2 max-w-max rounded-full bg-purple-500 py-1 px-3 text-xs font-bold text-white'>
-            Solana
-          </p>
-          <p className='mr-2 mb-2 max-w-max rounded-full bg-orange-500 py-1 px-3 text-xs font-bold text-white'>
-            Infura
-          </p>
-          <p className='mr-2 mb-2 max-w-max rounded-full bg-teal-500 py-1 px-3 text-xs font-bold text-white'>
-            tailwind css
-          </p>
-          <p className='mr-2 mb-2 max-w-max rounded-full bg-yellow-500 py-1 px-3 text-xs font-bold text-white'>
-            javascript
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 export default function HomePage() {
   return (
     <Layout>
@@ -85,7 +28,7 @@ export default function HomePage() {
 
       <main>
         {/*HERO */}
-        <section className='bg-gradient-to-br from-primary-500 to-green-300'>
+        {/* <section className='bg-gradient-to-br from-primary-500 to-green-300'>
           <div className='layout flex min-h-screen flex-col items-stretch justify-center'>
             <div className='flex flex-1  flex-col items-center justify-center text-white'>
               <h1 className='mt-4'>FINDROM.IO</h1>
@@ -96,7 +39,7 @@ export default function HomePage() {
                 </h3>
               </div>
               <h1>Romeo Angeles</h1>
-              <p className='mt-2 mt-7 text-center text-sm text-white'>
+              <p className='mt-7 text-center text-sm text-white'>
                 Developing web and mobile applications for over{' '}
                 <b className='text-white'>
                   {moment()
@@ -119,11 +62,63 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+        </section> */}
+
+        <section className='bg-gradient-to-br from-primary-500 to-green-300'>
+          <div className=' flex min-h-screen flex-col items-stretch justify-center'>
+            <div
+              className='hero min-h-screen'
+              style={{
+                backgroundImage: `url("https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/hero_bg.jpg?alt=media&token=718ea931-2464-47ca-89cb-90705a779a7b")`,
+              }}
+            >
+              <div className='hero-overlay bg-opacity-60'></div>
+              <div className='hero-content text-center text-neutral-content'>
+                <div className='max-w-md'>
+                  <h1 className='mb-5 text-5xl font-bold'>FINDROM.IO</h1>
+                  <div className='mt-20 flex min-w-max flex-row items-center justify-center text-white'>
+                    <h1>Hi! I Am Front End Engineer</h1>
+                  </div>
+                  <h1>Romeo Angeles</h1>
+                  <p className='mt-7 text-center text-sm text-white'>
+                    Developing web and mobile applications for over{' '}
+                    <b className='text-white'>
+                      {moment()
+                        .diff(moment([2020, 3]), 'years')
+                        .toString()}{' '}
+                      years
+                    </b>
+                    <br />
+                    as a front end engineer
+                  </p>
+
+                  <div className='w-100 mt-7 flex flex-row flex-wrap justify-center'>
+                    <ButtonLink
+                      variant='primary'
+                      className='rounded-lg px-10'
+                      href='mailto: romeoangeles010517@gmail.com'
+                    >
+                      Hire Me
+                    </ButtonLink>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/*Multi-platform */}
-        <section className='my-32 bg-white'>
+        <section className='mt-52 bg-white'>
           <div className='layout grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2'>
+            <div className='flex flex-row flex-wrap items-stretch justify-around sm:hidden'>
+              <Image
+                className='m-5 object-contain'
+                alt='nextjs-logo'
+                src='https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/multiplatform.png?alt=media&token=685a5a83-91ba-462f-91d4-a3ee97a70f1c'
+                height={350}
+                width={350}
+              />
+            </div>
             <div className='flex flex-col flex-wrap items-start justify-start text-primary-500'>
               <h4>Multi-Platform</h4>
               <h1 className='text-[3.5rem] leading-none text-dark'>
@@ -146,34 +141,28 @@ export default function HomePage() {
                 View Projects
               </ArrowLink>
             </div>
-            <div className='flex flex-row flex-wrap items-stretch justify-around'>
-              {techStack.imageLinks.map((link) => (
-                <Image
-                  key={link}
-                  className='m-5 object-contain'
-                  alt='nextjs-logo'
-                  src={link}
-                  height={150}
-                  width={150}
-                />
-              ))}
+            <div className='hidden flex-row flex-wrap items-stretch justify-around sm:flex'>
+              <Image
+                className='m-5 object-contain'
+                alt='nextjs-logo'
+                src='https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/multiplatform.png?alt=media&token=685a5a83-91ba-462f-91d4-a3ee97a70f1c'
+                height={350}
+                width={350}
+              />
             </div>
           </div>
         </section>
         {/*Proactive */}
-        <section className='my-32 bg-white'>
+        <section className='mt-52 bg-white'>
           <div className='layout grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2'>
             <div className='flex flex-row flex-wrap items-stretch justify-around'>
-              {techStack.imageLinks.map((link) => (
-                <Image
-                  key={link}
-                  className='m-5 object-contain'
-                  alt='nextjs-logo'
-                  src={link}
-                  height={150}
-                  width={150}
-                />
-              ))}
+              <Image
+                className='m-5 object-contain'
+                alt='nextjs-logo'
+                src='https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/proactive.png?alt=media&token=891ec2c2-fb06-4500-829d-4374671c5664'
+                height={350}
+                width={350}
+              />
             </div>
             <div className='flex flex-col flex-wrap items-start justify-start text-primary-500'>
               <h4>Proactive</h4>
@@ -202,8 +191,17 @@ export default function HomePage() {
         </section>
 
         {/*Leader */}
-        <section className='my-32 bg-white'>
+        <section className='my-52 bg-white'>
           <div className='layout grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2'>
+            <div className='flex flex-row flex-wrap items-stretch justify-around sm:hidden'>
+              <Image
+                className='m-5 object-contain'
+                alt='nextjs-logo'
+                src='https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/leader.png?alt=media&token=f80dedd5-d15e-496e-871e-d60ace8ce9d3'
+                height={350}
+                width={350}
+              />
+            </div>
             <div className='flex flex-col flex-wrap items-start justify-start text-primary-500'>
               <h4>Leader</h4>
               <h1 className='text-[3.5rem] leading-none text-dark'>
@@ -226,17 +224,14 @@ export default function HomePage() {
                 About Me
               </ArrowLink>
             </div>
-            <div className='flex flex-row flex-wrap items-stretch justify-around'>
-              {techStack.imageLinks.map((link) => (
-                <Image
-                  key={link}
-                  className='m-5 object-contain'
-                  alt='nextjs-logo'
-                  src={link}
-                  height={150}
-                  width={150}
-                />
-              ))}
+            <div className='hidden flex-row flex-wrap items-stretch justify-around sm:flex'>
+              <Image
+                className='m-5 object-contain'
+                alt='nextjs-logo'
+                src='https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/leader.png?alt=media&token=f80dedd5-d15e-496e-871e-d60ace8ce9d3'
+                height={350}
+                width={350}
+              />
             </div>
           </div>
         </section>
