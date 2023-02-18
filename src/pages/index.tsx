@@ -97,6 +97,11 @@ export default function HomePage() {
                       variant='primary'
                       className='rounded-lg px-10'
                       href='mailto: romeoangeles010517@gmail.com'
+                      onClick={() =>
+                        window.open(
+                          'https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/Angeles-Jr.-Romeo-D.-RESUME.pdf?alt=media&token=938519ce-d4fe-4f23-a1ff-7bc28f59a1a1'
+                        )
+                      }
                     >
                       Hire Me
                     </ButtonLink>
