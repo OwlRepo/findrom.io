@@ -33,7 +33,7 @@ const projects = [
   {
     title: 'TALK ADMIN',
     banner:
-      'https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/quicktalk.png?alt=media&token=ef280e11-8ffe-4d92-96a7-513e886e14e0',
+      'https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/no-banner.jpg?alt=media&token=9204eb44-8e68-48e2-9325-cd4f20d77213',
     protected: true,
     role: ['Web Developer', 'Product Designer', 'NextJS Developer'],
     desc: "An application that's focused on managing the TALK Mobile Application.",
@@ -81,7 +81,7 @@ const projects = [
   {
     title: 'U-PRO PLUS',
     banner:
-      'https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/Screenshot_20230219_041450.png?alt=media&token=f2d1d558-71c7-4ac3-a3e2-42bfcc06aac1',
+      'https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/no-banner.jpg?alt=media&token=9204eb44-8e68-48e2-9325-cd4f20d77213',
     protected: true,
     role: ['Flutter Developer', 'Lead Developer'],
     desc: 'A Cross Platform Mobile Application made for advertising purposes such as ADs management for Beauty Salons in Japan',
