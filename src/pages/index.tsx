@@ -65,7 +65,7 @@ export default function HomePage() {
                       href='mailto: romeoangeles010517@gmail.com'
                       onClick={() =>
                         window.open(
-                          'https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/Angeles-Jr.-Romeo-D.-RESUME.pdf?alt=media&token=938519ce-d4fe-4f23-a1ff-7bc28f59a1a1'
+                          'https://firebasestorage.googleapis.com/v0/b/sampleproject-31206.appspot.com/o/Angeles%20Jr.%2C%20Romeo%20D.%20-%20RESUME%20-%2002-19-2023.pdf?alt=media&token=270a9b51-039f-4989-ac66-70f197eecec0'
                         )
                       }
                     >
