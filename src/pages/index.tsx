@@ -189,9 +189,6 @@ export default function HomePage() {
                 frameworks to not only boost the speed of the development but
                 also deliver great user experience.
               </p>
-              <ArrowLink href='/' className='mt-5 text-dark'>
-                View Projects
-              </ArrowLink>
             </div>
             <div className='hidden flex-row flex-wrap items-stretch justify-around sm:flex'>
               <Image
@@ -236,9 +233,6 @@ export default function HomePage() {
                 and be prepared to accept and adopt to changes that might
                 happen.
               </p>
-              <ArrowLink href='/' className='mt-5 text-dark'>
-                Read Blog
-              </ArrowLink>
             </div>
           </div>
         </section>
@@ -273,9 +267,6 @@ export default function HomePage() {
                 like giving ideas and actively participating every team
                 discussion without overpromising and under-delivering.
               </p>
-              <ArrowLink href='/' className='mt-5 text-dark'>
-                About Me
-              </ArrowLink>
             </div>
             <div className='hidden flex-row flex-wrap items-stretch justify-around sm:flex'>
               <Image
